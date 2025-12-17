@@ -2,54 +2,53 @@ import os
 import json
 import time
 import pyperclip
-
+from datetime import datetime
 
 from emotion_detection import detect_emotion
 from reply import suggested_reply
 
 memory_file = "memory/inbox.json"
 
-def load_memory():
-    if not os.path.exists(memory_file):
-        return []
-    with open(memory_file,'r') as f:
-        return json.load(f)
-    
+os.makedirs('memory',exist_ok = True)
 
 
-def run_assistant():
-    print("Assistant Running....")
-    print("Waiting for new message......")
+if os.path.exists(memory_file):
+    try:
+        with open(memory_file,'r') as f:
+            memory = json.load(f)
+    except json.JSONDecodeError:
+        memory = []
+else:
+    memory = []
 
-    latest_index = -1
+last_text = ""
 
-    while True:
-        memory = load_memory()
 
-        if len(memory) - 1 <= latest_index:
-            time.sleep(1)
-            continue
+while True:
+    current_text = pyperclip.paste()
+    if not current_text or current_text == last_text:
+        time.sleep(0.5)
+        continue
 
-        latest_index = len(memory) - 1
+    print("New Message: ")
+    print(current_text)
+    entry = {
+        "time_stamp" : datetime.now().strftime("%Y-%m-%d %H:%M"),
+        "message" : current_text,
+        "sender" : "contact"
+    }
 
-        latest = memory[latest_index]
-        if latest.get("sender") != "contact":
-            time.sleep(1)
-            continue
+    memory.append(entry)
 
-        message = latest["message"]
+    with open(memory_file,'w') as f:
+        json.dump(memory,f,indent=2)
 
-        print("Got New Message")
-        print(message)
+    emotion = detect_emotion(current_text)
+    print("Detected emotion: ",emotion)
+    reply = suggested_reply(emotion)
+    print("Reply: ",reply)
+    last_text = reply
+    pyperclip.copy(reply)
+    print("Replied copied! ")
 
-        emotion = detect_emotion()
-        print(emotion)
-
-        reply = suggested_reply(emotion)
-        print("Suggested Reply: ", reply)
-        pyperclip.copy(reply)
-
-        time.sleep(1)
-
-if __name__ == "__main__":
-    run_assistant()
+    time.sleep(1)

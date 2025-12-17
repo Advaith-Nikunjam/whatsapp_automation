@@ -1,4 +1,4 @@
-from context_analyzer import latest_message
+#from main import latest_message
 
 EMOTION_KEYWORDS = {
     "happy": [
@@ -15,13 +15,12 @@ EMOTION_KEYWORDS = {
     ]
 }
 
-def detect_emotion():
-    latest = latest_message()
+def detect_emotion(text):
 
-    if not latest:
+    if not text:
         return "neutral"
     
-    text = latest['message'].lower()
+    text = text.lower()
 
     score = {emotion:0 for emotion in EMOTION_KEYWORDS}
 
