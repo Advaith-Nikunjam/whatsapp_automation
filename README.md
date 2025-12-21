@@ -1,4 +1,4 @@
-📱 WhatsApp Automation Assistant (Python)
+# 📱 WhatsApp Automation Assistant (Python)
 
 ---------------------------------------------------------------------------------------------------
 
@@ -17,7 +17,7 @@ This project shows how automation, emotion detection, and rule-based replies can
 
 ------------------------------------------------------------------------------------------------------
 
-✨ What This Project Does
+# ✨ What This Project Does
 
 This project has two main features:
 
@@ -69,7 +69,7 @@ This keeps the project easy to understand and lightweight.
 
 ---------------------------------------------------------------------------------------------------
 
-📁 Project Structure
+# 📁 Project Structure
 whatsapp_automation/
 │
 ├── main.py                 # Main menu and program control
@@ -87,7 +87,7 @@ whatsapp_automation/
 -------------------------------------------------------------------------------------------------
 
 
-🛠 Requirements
+# 🛠 Requirements
 
 Python 3.x
 
@@ -104,7 +104,7 @@ Make sure you sign in to your WhatsApp Web atleast once before running Bulk Mess
 -------------------------------------------------------------------------------------------------
 
 
-▶️ How to Run
+# ▶️ How to Run
 python main.py
 
 
@@ -154,7 +154,7 @@ WhatsApp Web opens and sends messages
 ----------------------------------------------------------------------------------------------
 
 
-⚠️ Important Warnings
+# ⚠️ Important Warnings
 
 🚫 WhatsApp Policy Warning
 
@@ -169,7 +169,7 @@ Use a test WhatsApp account only.
 ----------------------------------------------------------------------------------------
 
 
-🚫 Limitations
+# 🚫 Limitations
 
 Not fully automatic
 
@@ -183,7 +183,7 @@ Not production-ready
 
 -------------------------------------------------------------------------------------------
 
-🎓 Purpose of This Project
+# 🎓 Purpose of This Project
 
 This project is meant for:
 
@@ -198,7 +198,7 @@ GitHub portfolio demonstrations
 ----------------------------------------------------------------------------------------------
 
 
-🚀 Possible Improvements
+# 🚀 Possible Improvements
 
 Add AI/ML-based emotion detection
 
@@ -214,11 +214,11 @@ Context-aware replies
 -----------------------------------------------------------------------------------------------
 
 
-📜 Disclaimer
+# 📜 Disclaimer
 
 This project is created only for educational purposes.
 The author is not responsible for misuse, WhatsApp bans, or policy violations.
 
-⭐ If You Like This Project
+# ⭐ If You Like This Project
 
 Feel free to ⭐ the repository and experiment with your own improvements.
