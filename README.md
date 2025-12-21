@@ -90,7 +90,7 @@ Python Libraries
 pip install pyperclip pywhatkit openpyxl
 
 
-Make sure you sign in your whatsapp web and just open it atleast once before running Bulk Message.
+Make sure you sign in to your WhatsApp Web atleast once before running Bulk Message.
 
 -------------------------------------------------------------------------------------------------
 
