@@ -102,7 +102,7 @@ pip install pyperclip pywhatkit openpyxl
 ### Install dependencies
 pip install -r requirements.txt
 
-# Make sure you sign in to your WhatsApp Web atleast once before running Bulk Message.
+## Make sure you sign in to your WhatsApp Web atleast once before running Bulk Message.
 
 -------------------------------------------------------------------------------------------------
 
