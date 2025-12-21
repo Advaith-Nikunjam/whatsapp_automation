@@ -11,9 +11,10 @@ This project shows how automation, emotion detection, and rule-based replies can
 # 🚀 Quick Start 
 
 1. Clone the repo  
-2. Install dependencies  
-3. Run `python main.py`  
-4. Choose an option from the menu
+2. Install dependencies
+    pip install -r requirements.txt
+4. Run `python main.py`  
+5. Choose an option from the menu
 
 ------------------------------------------------------------------------------------------------------
 
@@ -98,8 +99,10 @@ WhatsApp Web account
 Python Libraries
 pip install pyperclip pywhatkit openpyxl
 
+### Install dependencies
+pip install -r requirements.txt
 
-Make sure you sign in to your WhatsApp Web atleast once before running Bulk Message.
+# Make sure you sign in to your WhatsApp Web atleast once before running Bulk Message.
 
 -------------------------------------------------------------------------------------------------
 
