@@ -1,0 +1,59 @@
+# ===============================
+# Python Cache & Compiled Files
+# ===============================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# ===============================
+# Virtual Environments
+# ===============================
+venv/
+env/
+.venv/
+
+# ===============================
+# Runtime / Generated Data
+# ===============================
+# Ignore everything inside memory folder
+memory/*
+
+# Keep the folder structure
+!memory/.gitkeep
+
+# Ignore all JSON runtime files
+*.json
+
+# ===============================
+# Logs & Temp Files
+# ===============================
+*.log
+*.tmp
+
+# ===============================
+# OS / System Files
+# ===============================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ===============================
+# Editor / IDE Settings
+# ===============================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ===============================
+# Excel Temporary Files
+# ===============================
+~$*.xlsx
+
+# ===============================
+# Python Tooling
+# ===============================
+.pytest_cache/
+.mypy_cache/
+coverage/
+htmlcov/
