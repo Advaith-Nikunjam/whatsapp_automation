@@ -8,6 +8,15 @@ This project shows how automation, emotion detection, and rule-based replies can
 ⚠️ This is NOT an official WhatsApp bot and does NOT use WhatsApp APIs.
 
 -----------------------------------------------------------------------------------------------------
+# 🚀 Quick Start 
+
+1. Clone the repo  
+2. Install dependencies  
+3. Run `python main.py`  
+4. Choose an option from the menu
+
+------------------------------------------------------------------------------------------------------
+
 ✨ What This Project Does
 
 This project has two main features:
