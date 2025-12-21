@@ -15,17 +15,21 @@ env/
 # ===============================
 # Runtime / Generated Data
 # ===============================
+
 # Ignore everything inside memory folder
 memory/*
 
-# Keep the folder structure
+# Keep memory folder structure
 !memory/.gitkeep
 
-# Ignore all JSON runtime files
+# Ignore runtime JSON files
 *.json
 
+# Ignore PyWhatKit generated database file
+PyWhatKit_DB.txt
+
 # ===============================
-# Logs & Temp Files
+# Logs & Temporary Files
 # ===============================
 *.log
 *.tmp
