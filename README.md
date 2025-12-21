@@ -70,23 +70,25 @@ This keeps the project easy to understand and lightweight.
 
 ---------------------------------------------------------------------------------------------------
 
- # 📁 Project Structure
+# 📁 Project Structure
 
-
+```text
 whatsapp_automation/
 │
-├── main.py 
-├── assistant.py 
+├── .gitignore
+├── LICENSE
+├── README.md
+├── requirements.txt
+├── main.py
+├── assistant.py
 ├── bulk_message.py
 ├── emotion_detection.py
 ├── reply.py
-├── context_analyzer.py 
-├── README.md
+├── context_analyzer.py
 │
 └── memory/
-└── inbox.json
-
-
+    └── .gitkeep
+```
 -------------------------------------------------------------------------------------------------
 
 
