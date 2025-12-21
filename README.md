@@ -70,19 +70,21 @@ This keeps the project easy to understand and lightweight.
 
 ---------------------------------------------------------------------------------------------------
 
-# 📁 Project Structure
+ # 📁 Project Structure
+
+
 whatsapp_automation/
 │
-├── main.py                 # Main menu and program control
-├── assistant.py            # Clipboard auto-reply logic
-├── bulk_message.py         # Bulk WhatsApp messaging
-├── emotion_detection.py    # Emotion detection rules
-├── reply.py                # Suggested replies
-├── context_analyzer.py     # Message memory handling
-├── README.md               # Project documentation
+├── main.py 
+├── assistant.py 
+├── bulk_message.py
+├── emotion_detection.py
+├── reply.py
+├── context_analyzer.py 
+├── README.md
 │
 └── memory/
-    └── inbox.json          # Saved message history
+└── inbox.json
 
 
 -------------------------------------------------------------------------------------------------
