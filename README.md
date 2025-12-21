@@ -1,4 +1,4 @@
-📱 WhatsApp Automation Assistant (Python)
+# 📱 WhatsApp Automation Assistant (Python)
 
 ---------------------------------------------------------------------------------------------------
 
@@ -8,7 +8,17 @@ This project shows how automation, emotion detection, and rule-based replies can
 ⚠️ This is NOT an official WhatsApp bot and does NOT use WhatsApp APIs.
 
 -----------------------------------------------------------------------------------------------------
-✨ What This Project Does
+# 🚀 Quick Start 
+
+1. Clone the repo  
+2. Install dependencies
+    pip install -r requirements.txt
+4. Run `python main.py`  
+5. Choose an option from the menu
+
+------------------------------------------------------------------------------------------------------
+
+# ✨ What This Project Does
 
 This project has two main features:
 
@@ -60,25 +70,29 @@ This keeps the project easy to understand and lightweight.
 
 ---------------------------------------------------------------------------------------------------
 
-📁 Project Structure
+# 📁 Project Structure
+
+```text
 whatsapp_automation/
 │
-├── main.py                 # Main menu and program control
-├── assistant.py            # Clipboard auto-reply logic
-├── bulk_message.py         # Bulk WhatsApp messaging
-├── emotion_detection.py    # Emotion detection rules
-├── reply.py                # Suggested replies
-├── context_analyzer.py     # Message memory handling
-├── README.md               # Project documentation
+├── .gitignore
+├── LICENSE
+├── README.md
+├── requirements.txt
+├── main.py
+├── assistant.py
+├── bulk_message.py
+├── emotion_detection.py
+├── reply.py
+├── context_analyzer.py
 │
 └── memory/
-    └── inbox.json          # Saved message history
-
-
+    └── .gitkeep
+```
 -------------------------------------------------------------------------------------------------
 
 
-🛠 Requirements
+# 🛠 Requirements
 
 Python 3.x
 
@@ -89,13 +103,15 @@ WhatsApp Web account
 Python Libraries
 pip install pyperclip pywhatkit openpyxl
 
+### Install dependencies
+pip install -r requirements.txt
 
-Make sure you sign in your whatsapp web and just open it atleast once before running Bulk Message.
+## Make sure you sign in to your WhatsApp Web atleast once before running Bulk Message.
 
 -------------------------------------------------------------------------------------------------
 
 
-▶️ How to Run
+# ▶️ How to Run
 python main.py
 
 
@@ -145,7 +161,7 @@ WhatsApp Web opens and sends messages
 ----------------------------------------------------------------------------------------------
 
 
-⚠️ Important Warnings
+# ⚠️ Important Warnings
 
 🚫 WhatsApp Policy Warning
 
@@ -160,7 +176,7 @@ Use a test WhatsApp account only.
 ----------------------------------------------------------------------------------------
 
 
-🚫 Limitations
+# 🚫 Limitations
 
 Not fully automatic
 
@@ -174,7 +190,7 @@ Not production-ready
 
 -------------------------------------------------------------------------------------------
 
-🎓 Purpose of This Project
+# 🎓 Purpose of This Project
 
 This project is meant for:
 
@@ -189,7 +205,7 @@ GitHub portfolio demonstrations
 ----------------------------------------------------------------------------------------------
 
 
-🚀 Possible Improvements
+# 🚀 Possible Improvements
 
 Add AI/ML-based emotion detection
 
@@ -205,11 +221,11 @@ Context-aware replies
 -----------------------------------------------------------------------------------------------
 
 
-📜 Disclaimer
+# 📜 Disclaimer
 
 This project is created only for educational purposes.
 The author is not responsible for misuse, WhatsApp bans, or policy violations.
 
-⭐ If You Like This Project
+# ⭐ If You Like This Project
 
 Feel free to ⭐ the repository and experiment with your own improvements.
