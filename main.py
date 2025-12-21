@@ -1,54 +1,51 @@
-import os
-import json
-import time
-import pyperclip
-from datetime import datetime
-
-from emotion_detection import detect_emotion
-from reply import suggested_reply
-
-memory_file = "memory/inbox.json"
-
-os.makedirs('memory',exist_ok = True)
+from bulk_message import bulk_message
+from assistant import auto_reply
 
 
-if os.path.exists(memory_file):
+print("\n")
+print("Hey Welcome!")
+print("This project has 2 parts, ")
+print("either you can send bulk messages to a number of contacts or whatsapp")
+print("Or You can run a auto reply assistant which will help you reply to your whatsapp messages.")
+print("-"*40)
+print("\n"*2)
+print("Choose the option you want")
+print("1. Whatsapp Bulk Message reply")
+print("2. Auto reply Assistant")
+print("3> Run Both")
+choice = int(input("Enter Your Choice - "))
+
+if choice == 1:
+    print("Running Whatsapp Bulk Messages!")
+    excel_path = input("Enter The Location path address of your Excel Worksheet").strip().strip('"')
+    print("Excel Location:",excel_path)
+    message = input("Enter the message you want to send in whatsapp to these contacts")
     try:
-        with open(memory_file,'r') as f:
-            memory = json.load(f)
-    except json.JSONDecodeError:
-        memory = []
-else:
-    memory = []
+        bulk_message(message,excel_path)
+    except KeyboardInterrupt:
+        print("Bulk message stoped")
 
-last_text = ""
+elif choice == 2:
+    print("Running reply assistant")
+    print("You Can Now copy any text and reply for that text will be copied back on the clipboard")
+    try:
+        auto_reply()
+    except KeyboardInterrupt:
+        print("\n Auto Reply Stopped!")
+
+elif choice == 3:
+    print("Running Whatsapp Bulk Messages!")
+    excel_path = input("Enter The Location path address of your Excel Worksheet").strip().strip('"')
+    message = input("Enter the message you want to send in whatsapp to these contacts")
+    try:
+        bulk_message(message,excel_path)
+    except KeyboardInterrupt:
+        print("Bulk message stoped")
 
 
-while True:
-    current_text = pyperclip.paste()
-    if not current_text or current_text == last_text:
-        time.sleep(0.5)
-        continue
-
-    print("New Message: ")
-    print(current_text)
-    entry = {
-        "time_stamp" : datetime.now().strftime("%Y-%m-%d %H:%M"),
-        "message" : current_text,
-        "sender" : "contact"
-    }
-
-    memory.append(entry)
-
-    with open(memory_file,'w') as f:
-        json.dump(memory,f,indent=2)
-
-    emotion = detect_emotion(current_text)
-    print("Detected emotion: ",emotion)
-    reply = suggested_reply(emotion)
-    print("Reply: ",reply)
-    last_text = reply
-    pyperclip.copy(reply)
-    print("Replied copied! ")
-
-    time.sleep(1)
+    print("Running reply assistant")
+    print("You Can Now copy any text and reply for that text will be copied back on the clipboard")
+    try:
+        auto_reply()
+    except KeyboardInterrupt:
+        print("\n Auto Reply Stopped!")
