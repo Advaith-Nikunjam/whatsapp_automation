@@ -12,7 +12,7 @@ print("\n"*2)
 print("Choose the option you want")
 print("1. Whatsapp Bulk Message reply")
 print("2. Auto reply Assistant")
-print("3> Run Both")
+print("3. Run Both")
 choice = int(input("Enter Your Choice - "))
 
 if choice == 1:

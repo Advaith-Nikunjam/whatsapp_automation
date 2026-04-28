@@ -4,8 +4,8 @@ import time
 import pyperclip
 from datetime import datetime
 
-from emotion_detection import detect_emotion
-from reply import suggested_reply
+
+from reply import generated_reply
 
 memory_file = "memory/inbox.json"
 
@@ -44,12 +44,10 @@ def auto_reply():
         with open(memory_file,'w') as f:
             json.dump(memory,f,indent=2)
 
-        emotion = detect_emotion(current_text)
-        print("Detected emotion: ",emotion)
-        reply = suggested_reply(emotion)
+        reply = generated_reply(current_text)
         print("Reply: ",reply)
         last_text = reply
         pyperclip.copy(reply)
         print("Replied copied! ")
 
-        time.sleep(1)
+        time.sleep(3)
